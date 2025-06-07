@@ -97,7 +97,8 @@ def get_conversation_chain(vectorstore, chat_history_messages=[]):
     if vectorstore is None:
         return None
     try:
-        llm = ChatOpenAI(model_name="gpt-3.5-turbo", temperature=0.5)
+        # llm = ChatOpenAI(model_name="gpt-3.5-turbo", temperature=0.5)
+        llm = ChatOpenAI(model_name="gpt-4o-mini", temperature=0.5)
         memory = ConversationBufferMemory(
             memory_key='chat_history', return_messages=True)
 
